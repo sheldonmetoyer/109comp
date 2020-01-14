@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Update mypeople
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="background">
+  
+  <ion-card>
+
+    <ion-card-header>
+      Create new Post
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Your message:</ion-label>
+        <ion-input [(ngModel)]="model.message" name="message"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="stacked">Image url:</ion-label>
+        <ion-input [(ngModel)]="model.imageUrl" name="imageUrl"></ion-input>
+
+        <hr>
+        <ion-button color="secondary" (click)="chooseImage(0)">Choose Image</ion-button>
+        <ion-button color="secondary" (click)="chooseImage(1)">Take picture</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">To:</ion-label>
+        <ion-select [(ngModel)]="model.to">
+          <ion-select-option value="Everyone">Everyone</ion-select-option>
+          <ion-select-option *ngFor="let f of myFriends" [value]="f.name">{{ f.name }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      
+    
+      <ion-button (click)="sendPost();" expand="block" size="medium" color="tertiary">Submit Post</ion-button>
+    
+    </ion-card-content>
+  </ion-card>
+</ion-content>

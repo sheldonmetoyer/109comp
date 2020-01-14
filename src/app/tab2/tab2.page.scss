@@ -1,0 +1,20 @@
+/* comment */
+
+.background{
+    --background: linear-gradient(to top, #6320e0, #342db1, #182a80, #15214d, #14151c);
+}
+
+ion-card{
+    background-color: white;
+}
+
+ion-card-header{
+    text-align: center;
+    font-weight: bold;
+    color: #670fa1;
+    padding-bottom: 0;
+    font-size: 16px;
+    padding-top: 10px;
+    border-bottom: 1px solid #d7d7d7;
+    line-height: 25px;
+}
